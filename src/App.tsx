@@ -78,7 +78,17 @@ function App() {
       setSelectedAnswerIdx(idx);
       const correctAnswer = selectedQuestion.answers[selectedQuestion.correct];
       const chosenAnswer = shuffledAnswers[idx];
-      setIsCorrect(chosenAnswer === correctAnswer);
+      const correct = chosenAnswer === correctAnswer;
+      setIsCorrect(correct);
+      // Hide modal after 2 seconds
+      setTimeout(() => {
+        setShowQuestion(false);
+        setSelectedLetter(null);
+        setSelectedQuestion(null);
+        setShuffledAnswers([]);
+        setSelectedAnswerIdx(null);
+        setIsCorrect(null);
+      }, 2000);
     }
   };
 
@@ -186,21 +196,19 @@ function App() {
           </button>
         </div>
 
-        {/* Result Display */}
-        <div className="min-h-[200px] flex items-center justify-center">
-          {selectedLetter && (
-            <div className={`bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto transition-all duration-500 transform ${
-              showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-            }`}>
-              <div className="text-8xl font-bold text-indigo-600 mb-4 animate-pulse" style={{ fontFamily: 'serif' }}>
+        {/* Result Display as Modal */}
+        {selectedLetter && (
+          <div className={`fixed inset-0 z-30 flex items-center justify-center bg-black/50 transition-all duration-500 ${showQuestion ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-2xl w-full mx-4 transition-all duration-500 transform ${showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
+              <div className="text-8xl font-bold text-indigo-600 mb-4 animate-pulse text-center" style={{ fontFamily: 'serif' }}>
                 {selectedLetter}
               </div>
               {showQuestion && selectedQuestion && (
                 <div className="space-y-4">
-                  <div className="text-sm font-semibold text-indigo-500 uppercase tracking-wide">
+                  <div className="text-sm font-semibold text-indigo-500 uppercase tracking-wide text-center">
                     {selectedQuestion.category}
                   </div>
-                  <div className="text-2xl font-bold text-gray-800 leading-relaxed">
+                  <div className="text-2xl font-bold text-gray-800 leading-relaxed text-center">
                     {selectedQuestion.question}
                   </div>
                   <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -209,7 +217,7 @@ function App() {
                         key={answer}
                         onClick={() => handleAnswer(idx)}
                         disabled={isCorrect !== null}
-                        className={`px-6 py-4 rounded-xl font-bold text-lg border-2 transition-all duration-300
+                        className={`px-6 py-4 rounded-xl font-bold text-lg border-2 transition-all duration-300 w-full
                           ${selectedAnswerIdx === idx && isCorrect === true ? 'bg-green-200 border-green-500 text-green-800 scale-105' : ''}
                           ${selectedAnswerIdx === idx && isCorrect === false ? 'bg-red-200 border-red-500 text-red-800 scale-105' : ''}
                           ${selectedAnswerIdx !== idx && isCorrect !== null ? 'opacity-60' : 'bg-white/80 border-gray-300 text-gray-800 hover:bg-blue-100 hover:border-blue-400'}
@@ -220,25 +228,27 @@ function App() {
                     ))}
                   </div>
                   {isCorrect === true && (
-                    <div className="mt-4 text-green-700 font-bold text-xl flex items-center gap-2">
+                    <div className="mt-4 text-green-700 font-bold text-xl flex items-center gap-2 justify-center">
                       ✔️ תשובה נכונה!
                     </div>
                   )}
                   {isCorrect === false && (
-                    <div className="mt-4 text-red-700 font-bold text-xl flex items-center gap-2">
+                    <div className="mt-4 text-red-700 font-bold text-xl flex items-center gap-2 justify-center">
                       ❌ תשובה שגויה. נסה שוב בפעם הבאה!
                     </div>
                   )}
                 </div>
               )}
             </div>
-          )}
-          {!selectedLetter && !isSpinning && (
-            <div className="text-white/70 text-xl">
-              לחץ על "סובב את הגלגל" כדי להתחיל! 🎯
-            </div>
-          )}
-        </div>
+          </div>
+        )}
+        {/* End Modal */}
+
+        {!selectedLetter && !isSpinning && (
+          <div className="text-white/70 text-xl">
+            לחץ על "סובב את הגלגל" כדי להתחיל! 🎯
+          </div>
+        )}
       </div>
     </div>
   );
