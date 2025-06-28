@@ -205,9 +205,6 @@ function App() {
               </div>
               {showQuestion && selectedQuestion && (
                 <div className="space-y-4">
-                  <div className="text-sm font-semibold text-indigo-500 uppercase tracking-wide text-center">
-                    {selectedQuestion.category}
-                  </div>
                   <div className="text-2xl font-bold text-gray-800 leading-relaxed text-center">
                     {selectedQuestion.question}
                   </div>
