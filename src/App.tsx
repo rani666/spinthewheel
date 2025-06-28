@@ -206,7 +206,7 @@ function App() {
         {/* Result Display as Modal */}
         {selectedLetter && (
           <div className={`fixed inset-0 z-30 flex items-center justify-center bg-black/50 transition-all duration-500 ${showQuestion ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-            <div className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-md w-full mx-4 transition-all duration-500 transform ${showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
+            <div className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-sm w-full mx-6 transition-all duration-500 transform ${showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
               <div className="text-6xl font-bold text-[#2A7F31] mb-4 animate-pulse text-center" style={{ fontFamily: 'serif' }}>
                 {selectedLetter}
               </div>
