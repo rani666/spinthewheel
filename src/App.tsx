@@ -101,10 +101,10 @@ function App() {
       const startAngle = i * degreesPerSlice;
       const endAngle = (i + 1) * degreesPerSlice;
       
-      // Create alternating bright colors for better visibility
-      const hue = (i * 360 / numberOfLetters + (i % 2 === 0 ? 0 : 30)) % 360;
-      const saturation = 70 + (i % 3) * 10; // Vary saturation slightly
-      const lightness = 55 + (i % 2) * 10; // Alternate lightness
+      // Create alternating green shades for better visibility
+      const hue = 120 + (i * 20) % 40; // Green variations
+      const saturation = 60 + (i % 3) * 15; // Vary saturation
+      const lightness = 45 + (i % 2) * 15; // Alternate lightness
       
       slices.push(`hsl(${hue}, ${saturation}%, ${lightness}%) ${startAngle}deg ${endAngle}deg`);
     }
@@ -113,16 +113,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#E0ECCF] via-[#E6F0DB] to-[#D4E8C4] flex items-center justify-center p-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8 bg-[#2A7F31] rounded-2xl p-6 shadow-lg">
           <h1 className="text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
-            <Sparkles className="text-yellow-300" size={48} />
+            <Sparkles className="text-[#F28D2B]" size={48} />
             גלגל האלף-בית
-            <Sparkles className="text-yellow-300" size={48} />
+            <Sparkles className="text-[#F28D2B]" size={48} />
           </h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-[#E6F0DB]">
             סובב את הגלגל כדי לקבל אות ולענות על השאלה!
           </p>
         </div>
@@ -131,13 +131,13 @@ function App() {
         <div className="relative mb-8">
           {/* Pointer */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 z-20">
-            <div className="w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-red-500 filter drop-shadow-lg"></div>
+            <div className="w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-[#F28D2B] filter drop-shadow-lg"></div>
           </div>
           {/* Wheel */}
           <div className="relative w-96 h-96 mx-auto">
             <div
               ref={wheelRef}
-              className={`w-full h-full rounded-full border-8 border-white shadow-2xl transition-transform duration-4000 ease-out ${isSpinning ? '' : ''}`}
+              className={`w-full h-full rounded-full border-8 border-[#2A7F31] shadow-2xl transition-transform duration-4000 ease-out ${isSpinning ? '' : ''}`}
               style={{
                 transform: `rotate(${rotation}deg)`,
                 background: `conic-gradient(${generateWheelSlices()})`
@@ -151,7 +151,7 @@ function App() {
                   <div
                     key={letter}
                     className={`absolute w-10 h-10 flex items-center justify-center font-bold text-white text-2xl transition-all duration-300 ${
-                      isSelected ? 'scale-125 text-yellow-300 font-extrabold drop-shadow-lg' : ''
+                      isSelected ? 'scale-125 text-[#F28D2B] font-extrabold drop-shadow-lg' : ''
                     }`}
                     style={{
                       top: '50%',
@@ -166,8 +166,8 @@ function App() {
                 );
               })}
               {/* Center circle */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full shadow-inner flex items-center justify-center">
-                <div className="w-4 h-4 bg-gray-800 rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full shadow-inner flex items-center justify-center border-4 border-[#2A7F31]">
+                <div className="w-4 h-4 bg-[#333333] rounded-full"></div>
               </div>
             </div>
           </div>
@@ -180,8 +180,8 @@ function App() {
             disabled={isSpinning}
             className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
               isSpinning 
-                ? 'bg-gray-400 text-gray-700 cursor-not-allowed scale-95' 
-                : 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 hover:scale-105 shadow-lg hover:shadow-xl'
+                ? 'bg-[#CCCCCC] text-[#666666] cursor-not-allowed scale-95' 
+                : 'bg-gradient-to-r from-[#2A7F31] to-[#1F5F26] text-white hover:from-[#1F5F26] hover:to-[#2A7F31] hover:scale-105 shadow-lg hover:shadow-xl'
             }`}
           >
             <Play className="inline mr-2" size={20} />
@@ -189,7 +189,7 @@ function App() {
           </button>
           <button
             onClick={resetGame}
-            className="px-6 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="px-6 py-4 rounded-full font-bold text-lg bg-gradient-to-r from-[#F28D2B] to-[#E67E22] text-white hover:from-[#E67E22] hover:to-[#F28D2B] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <RotateCcw className="inline mr-2" size={20} />
             איפוס
@@ -199,25 +199,25 @@ function App() {
         {/* Result Display as Modal */}
         {selectedLetter && (
           <div className={`fixed inset-0 z-30 flex items-center justify-center bg-black/50 transition-all duration-500 ${showQuestion ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-            <div className={`bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-2xl w-full mx-4 transition-all duration-500 transform ${showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
-              <div className="text-8xl font-bold text-indigo-600 mb-4 animate-pulse text-center" style={{ fontFamily: 'serif' }}>
+            <div className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-md w-full mx-4 transition-all duration-500 transform ${showQuestion ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
+              <div className="text-6xl font-bold text-[#2A7F31] mb-4 animate-pulse text-center" style={{ fontFamily: 'serif' }}>
                 {selectedLetter}
               </div>
               {showQuestion && selectedQuestion && (
                 <div className="space-y-4">
-                  <div className="text-2xl font-bold text-gray-800 leading-relaxed text-center">
+                  <div className="text-xl font-bold text-[#333333] leading-relaxed text-center">
                     {selectedQuestion.question}
                   </div>
-                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="mt-6 grid grid-cols-1 gap-3">
                     {shuffledAnswers.map((answer, idx) => (
                       <button
                         key={answer}
                         onClick={() => handleAnswer(idx)}
                         disabled={isCorrect !== null}
-                        className={`px-6 py-4 rounded-xl font-bold text-lg border-2 transition-all duration-300 w-full
+                        className={`px-4 py-3 rounded-xl font-bold text-base border-2 transition-all duration-300 w-full
                           ${selectedAnswerIdx === idx && isCorrect === true ? 'bg-green-200 border-green-500 text-green-800 scale-105' : ''}
                           ${selectedAnswerIdx === idx && isCorrect === false ? 'bg-red-200 border-red-500 text-red-800 scale-105' : ''}
-                          ${selectedAnswerIdx !== idx && isCorrect !== null ? 'opacity-60' : 'bg-white/80 border-gray-300 text-gray-800 hover:bg-blue-100 hover:border-blue-400'}
+                          ${selectedAnswerIdx !== idx && isCorrect !== null ? 'opacity-60' : 'bg-white border-[#CCCCCC] text-[#333333] hover:bg-[#E6F0DB] hover:border-[#2A7F31]'}
                         `}
                       >
                         {answer}
@@ -225,12 +225,12 @@ function App() {
                     ))}
                   </div>
                   {isCorrect === true && (
-                    <div className="mt-4 text-green-700 font-bold text-xl flex items-center gap-2 justify-center">
+                    <div className="mt-4 text-green-700 font-bold text-lg flex items-center gap-2 justify-center">
                       ✔️ תשובה נכונה!
                     </div>
                   )}
                   {isCorrect === false && (
-                    <div className="mt-4 text-red-700 font-bold text-xl flex items-center gap-2 justify-center">
+                    <div className="mt-4 text-red-700 font-bold text-lg flex items-center gap-2 justify-center">
                       ❌ תשובה שגויה. נסה שוב בפעם הבאה!
                     </div>
                   )}
@@ -242,7 +242,7 @@ function App() {
         {/* End Modal */}
 
         {!selectedLetter && !isSpinning && (
-          <div className="text-white/70 text-xl">
+          <div className="text-[#333333] text-xl bg-white/80 rounded-xl p-4 shadow-md">
             לחץ על "סובב את הגלגל" כדי להתחיל! 🎯
           </div>
         )}
