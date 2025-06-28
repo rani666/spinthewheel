@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, RotateCcw, Sparkles } from 'lucide-react';
 import { hebrewQuestions, Question } from './questions';
+import logoLevHasharon from './assets/logo-lev-hasharon.png';
 
 function App() {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -115,6 +116,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#E0ECCF] via-[#E6F0DB] to-[#D4E8C4] flex items-center justify-center p-4">
       <div className="max-w-4xl mx-auto text-center">
+        {/* Logo above header */}
+        <div className="flex justify-center mb-4">
+          <div className="bg-[#E0ECCF] rounded-xl p-3 shadow-md">
+            <img src={logoLevHasharon} alt="לב השרון לוגו" className="h-16 w-auto sm:h-20 object-contain mx-auto" />
+          </div>
+        </div>
         {/* Header */}
         <div className="mb-8 bg-[#2A7F31] rounded-2xl p-6 shadow-lg">
           <h1 className="text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
