@@ -5,163 +5,378 @@ export interface Question {
 }
 
 export const hebrewQuestions: Record<string, Question[]> = {
-  א: [
+  "א": [
     {
-      question: "Name something that starts with 'א' (Aleph)",
-      answers: ["אריה (Lion)", "בית (House)", "גמל (Camel)", "דג (Fish)"],
-      correct: 0
+      "question": "בספר 'איה פלוטו', מי הכלב המפורסם?",
+      "answers": ["פלוטו", "נחמן", "בנצי"],
+      "correct": 0
     },
     {
-      question: "Say a city that starts with 'א' (Aleph)",
-      answers: ["אילת (Eilat)", "תל אביב (Tel Aviv)", "חיפה (Haifa)"],
-      correct: 0
+      "question": "בספר 'אליעזר והגזר', מה אליעזר שתל באדמה?",
+      "answers": ["גזר", "תפוח", "בננה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'אפונה וגזר', איזה ירק הוא כתום?",
+      "answers": ["גזר", "אפונה", "מלפפון"],
+      "correct": 0
     }
   ],
-  ב: [
+  "ב": [
     {
-      question: "Name something that starts with 'ב' (Bet)",
-      answers: ["בננה (Banana)", "אריה (Lion)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'בנצי', מה בנצי לא אוהב לעשות?",
+      "answers": ["להתקלח", "לאכול", "לשחק"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'בארץ יען', איזה חיה היא גדולה עם צוואר ארוך?",
+      "answers": ["יען", "ג'ירף", "פיל"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'ברכבת יורדת לים', לאן נוסעת הרכבת בסוף?",
+      "answers": ["לַיָּם", "לַהַר", "לָעִיר"],
+      "correct": 0
     }
   ],
-  ג: [
+  "ג": [
     {
-      question: "Name something that starts with 'ג' (Gimel)",
-      answers: ["גמל (Camel)", "בית (House)", "דג (Fish)"],
-      correct: 0
+      "question": "בספר 'גברת קרש ומר מערוף', מה גברת קרש עשתה לאוכל?",
+      "answers": ["בישלה", "אכלה", "זרקה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'גרביים של פיל', מה הפיל שם על הרגליים?",
+      "answers": ["גרביים", "נעליים", "כפפות"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'גן של שקמים', איזה עץ גדל בגן?",
+      "answers": ["שקמה", "תפוח", "לימון"],
+      "correct": 0
     }
   ],
-  ד: [
+  "ד": [
     {
-      question: "Name something that starts with 'ד' (Dalet)",
-      answers: ["דג (Fish)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'דירה להשכיר', מי גר בקומה הראשונה?",
+      "answers": ["תרנגולת", "חתול", "קיפוד"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'דובון לא לא', מה הדובון לא רוצה לעשות?",
+      "answers": ["לישון", "לאכול", "לשחק"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'דודי שמחה', מה דודי שמחה אהב לאכול?",
+      "answers": ["עוגיות", "ירקות", "בשר"],
+      "correct": 0
     }
   ],
-  ה: [
+  "ה": [
     {
-      question: "Name something that starts with 'ה' (He)",
-      answers: ["הר (Mountain)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'הבית של יעל', מה יעל רוצה לבנות?",
+      "answers": ["בית", "מגדל", "אוטו"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'הכינה נחמה', מה יש לנחמה בראש?",
+      "answers": ["כינה", "פרפר", "פרח"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'הצב של אורן', איזה חיה יש לאורן?",
+      "answers": ["צב", "חתול", "כלב"],
+      "correct": 0
     }
   ],
-  ו: [
+  "ו": [
     {
-      question: "Name something that starts with 'ו' (Vav)",
-      answers: ["ורד (Rose)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'ולפעמים...', מה קרה לילד?",
+      "answers": ["נרדם", "שיחק", "אכל"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'ויהי ערב', מתי קרה הסיפור?",
+      "answers": ["בָּעֶרֶב", "בַּבֹּקֶר", "בַּצָּהֳרַיִים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'ויהי בוקר', מתי קרה הסיפור?",
+      "answers": ["בבוקר", "בערב", "בלילה"],
+      "correct": 0
     }
   ],
-  ז: [
+  "ז": [
     {
-      question: "Name something that starts with 'ז' (Zayin)",
-      answers: ["זאב (Wolf)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'זבנג!', איזה קול עושה הילד כשהוא כועס?",
+      "answers": ["זבנג!", "בנג!", "בום!"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'זאב רע וילד טוב', מי טוב?",
+      "answers": ["הילד", "הזאב", "אף אחד"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'זוהר והפרפר', מה מחפש הפרפר?",
+      "answers": ["פרח", "בית", "אוכל"],
+      "correct": 0
     }
   ],
-  ח: [
+  "ח": [
     {
-      question: "Name something that starts with 'ח' (Het)",
-      answers: ["חתול (Cat)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'החתול שמיל', איזה חיה הוא שמיל?",
+      "answers": ["חתול", "כלב", "ציפור"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'חמישה בלונים', כמה בלונים היו בהתחלה?",
+      "answers": ["חמישה", "שלושה", "עשרה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'חבר מרחוב 0', איזה מספר היה לרחוב?",
+      "answers": ["אפס", "אחד", "שתיים"],
+      "correct": 0
     }
   ],
-  ט: [
+  "ט": [
     {
-      question: "Name something that starts with 'ט' (Tet)",
-      answers: ["טווס (Peacock)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'טרופותי', איזה יצור המציא העכבר?",
+      "answers": ["טרופותי", "דרקון", "גמד"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'טיול עם צבי', עם מי טייל הילד?",
+      "answers": ["צבי", "כלב", "חתול"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'טוב לגעת', איזה חוש משתמשים בו?",
+      "answers": ["מגע", "ראייה", "שמיעה"],
+      "correct": 0
     }
   ],
-  י: [
+  "י": [
     {
-      question: "Name something that starts with 'י' (Yod)",
-      answers: ["ילד (Child)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'ילדה אחת', כמה ילדות יש?",
+      "answers": ["אחת", "שתיים", "שלוש"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'יוסי ילד שלי מוצלח', מה יוסי?",
+      "answers": ["מוצלח", "עצלן", "שובב"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'יום הולדת', מה הילד חוגג?",
+      "answers": ["יום הולדת", "חג", "טיול"],
+      "correct": 0
     }
   ],
-  כ: [
+  "כ": [
     {
-      question: "Name something that starts with 'כ' (Kaf)",
-      answers: ["כלב (Dog)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'כובע קסמים', מה הכובע עושה?",
+      "answers": ["קסמים", "מגן מהשמש", "מתחמם"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'כפפות', מה לובשים על הידיים?",
+      "answers": ["כפפות", "גרביים", "נעליים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'ככה זה כשאוהבים', מה הדמויות מרגישות?",
+      "answers": ["אהבה", "כעס", "עצב"],
+      "correct": 0
     }
   ],
-  ל: [
+  "ל": [
     {
-      question: "Name something that starts with 'ל' (Lamed)",
-      answers: ["לימון (Lemon)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'לוליק', מה לוליק אוהב לשחק?",
+      "answers": ["בכדור", "בבובות", "בקוביות"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'לילה טוב, ירח', מה אומרים לירח?",
+      "answers": ["לילה טוב", "בוקר טוב", "שלום"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'לא לחינם הלך זרזיר אצל עורב', איזה ציפורים יש בסיפור?",
+      "answers": ["זרזיר ועורב", "דרור ויונה", "נשר ועיט"],
+      "correct": 0
     }
   ],
-  מ: [
+  "מ": [
     {
-      question: "Name something that starts with 'מ' (Mem)",
-      answers: ["מלפפון (Cucumber)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'מעשה בחמישה בלונים', מה קרה לבלון האדום?",
+      "answers": ["התפוצץ", "עף", "נעלם"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'מיץ פטל', מה השועל שתה?",
+      "answers": ["מיץ פטל", "מים", "חלב"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'מי רוצה שזיף?', איזה פרי הילד רוצה?",
+      "answers": ["שזיף", "תפוח", "בננה"],
+      "correct": 0
     }
   ],
-  נ: [
+  "נ": [
     {
-      question: "Name something that starts with 'נ' (Nun)",
-      answers: ["נמר (Tiger)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'נמלה בגינה', איפה הנמלה נמצאת?",
+      "answers": ["בגינה", "בבית", "ביער"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'נועה רוצה לטוס', מה נועה רוצה לעשות?",
+      "answers": ["לטוס", "לשחות", "לרוץ"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'נחמן הקיפוד', איזה חיה הוא נחמן?",
+      "answers": ["קיפוד", "ארנב", "שפן"],
+      "correct": 0
     }
   ],
-  ס: [
+  "ס": [
     {
-      question: "Name something that starts with 'ס' (Samekh)",
-      answers: ["סוס (Horse)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'סבתא בישלה דייסה', מה סבתא בישלה?",
+      "answers": ["דייסה", "מרק", "עוגה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'סדר חדש בבית', מה מסדרים בבית?",
+      "answers": ["צעצועים", "אוכל", "בגדים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'סודות מתוקים', מה מסתתר בספר?",
+      "answers": ["סודות", "מתוקים", "צעצועים"],
+      "correct": 0
     }
   ],
-  ע: [
+  "ע": [
     {
-      question: "Name something that starts with 'ע' (Ayin)",
-      answers: ["עכבר (Mouse)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'ענן על מקל', מה יש לילד?",
+      "answers": ["ענן על מקל", "פרח על מקל", "בלון על מקל"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'עוץ לי גוץ לי', מי יודע את השם הסודי?",
+      "answers": ["עוץ לי גוץ לי", "המלך", "המלכה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'עיגול', איזה צורה היא הדמות הראשית?",
+      "answers": ["עיגול", "ריבוע", "משולש"],
+      "correct": 0
     }
   ],
-  פ: [
+  "פ": [
     {
-      question: "Name something that starts with 'פ' (Pe)",
-      answers: ["פרח (Flower)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'פיטר הארנב', מה פיטר אוהב לאכול בגינה?",
+      "answers": ["ירקות", "פירות", "פרחים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'פעם אחת... ואולי פעמיים', כמה פעמים קרה הסיפור?",
+      "answers": ["פעם אחת או פעמיים", "הרבה פעמים", "אף פעם"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'פילים לא רוקדים', מה פילים לא יכולים לעשות?",
+      "answers": ["לרקוד", "לשחק", "לאכול"],
+      "correct": 0
     }
   ],
-  צ: [
+  "צ": [
     {
-      question: "Name something that starts with 'צ' (Tsadi)",
-      answers: ["צב (Turtle)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'צלילים מן הלב', מה הילד אוהב להשמיע?",
+      "answers": ["צלילים", "קולות", "שירים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'ציפור הנפש', איזה חיה היא ציפור הנפש?",
+      "answers": ["ציפור", "פרפר", "דג"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'צריך ללכת לישון', מה צריך לעשות בסוף היום?",
+      "answers": ["לישון", "לשחק", "לאכול"],
+      "correct": 0
     }
   ],
-  ק: [
+  "ק": [
     {
-      question: "Name something that starts with 'ק' (Qof)",
-      answers: ["קוף (Monkey)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'קטנטנים', איך קוראים לילדים?",
+      "answers": ["קטנטנים", "גדולים", "ענקיים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'קוני למל', מה קוני למל עושה?",
+      "answers": ["מתחפש", "שר", "רוקד"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'קוקו', איזה חיה הוא קוקו?",
+      "answers": ["קוף", "כלב", "חתול"],
+      "correct": 0
     }
   ],
-  ר: [
+  "ר": [
     {
-      question: "Name something that starts with 'ר' (Resh)",
-      answers: ["רימון (Pomegranate)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'רוני ונומי והדב יעקב', מי הדב?",
+      "answers": ["יעקב", "דני", "יוסי"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'רגליים', מה עושים עם הרגליים?",
+      "answers": ["הולכים", "אוכלים", "ישנים"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'רחוב העצב ורחוב האושר', באיזה רחוב יש הרבה שמחה?",
+      "answers": ["רחוב האושר", "רחוב העצב", "אף אחד מהם"],
+      "correct": 0
     }
   ],
-  ש: [
+  "ש": [
     {
-      question: "Name something that starts with 'ש' (Shin)",
-      answers: ["שועל (Fox)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'שורום בורום', מה קורה כשיש שורום בורום?",
+      "answers": ["חגיגה", "מריבה", "שקט"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'שמוליק קיפוד', איזה חיה הוא שמוליק?",
+      "answers": ["קיפוד", "חתול", "כלב"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'שפן קטן', איזה חיה הוא שפן?",
+      "answers": ["שפן", "ארנב", "צב"],
+      "correct": 0
     }
   ],
-  ת: [
+  "ת": [
     {
-      question: "Name something that starts with 'ת' (Tav)",
-      answers: ["תפוח (Apple)", "בית (House)", "גמל (Camel)"],
-      correct: 0
+      "question": "בספר 'תירס חם', מה הילד צועק?",
+      "answers": ["תירס חם", "גלידה קרה", "שוקולד מתוק"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'תנינה', איזה חיה היא תנינה?",
+      "answers": ["תנינה", "פילה", "ג'ירפה"],
+      "correct": 0
+    },
+    {
+      "question": "בספר 'תמונה משפחתית', מה נמצא בתמונה?",
+      "answers": ["משפחה", "חברים", "חיות"],
+      "correct": 0
     }
   ]
-}; 
+}
