@@ -117,19 +117,19 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-[#E0ECCF] via-[#E6F0DB] to-[#D4E8C4] flex items-center justify-center p-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo above header */}
-        <div className="flex justify-center mb-4">
-          <div className="bg-[#E0ECCF] rounded-xl p-3 shadow-md">
-            <img src={logoLevHasharon} alt="לב השרון לוגו" className="h-16 w-auto sm:h-20 object-contain mx-auto" />
+        <div className="flex justify-center mb-2 sm:mb-4">
+          <div className="bg-[#E0ECCF] rounded-xl p-2 sm:p-3 shadow-md w-full max-w-[180px] sm:max-w-xs mx-auto">
+            <img src={logoLevHasharon} alt="לב השרון לוגו" className="h-12 w-auto sm:h-16 md:h-20 object-contain mx-auto" />
           </div>
         </div>
         {/* Header */}
-        <div className="mb-8 bg-[#2A7F31] rounded-2xl p-6 shadow-lg">
-          <h1 className="text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
-            <Sparkles className="text-[#F28D2B]" size={48} />
+        <div className="mb-6 sm:mb-8 bg-[#2A7F31] rounded-2xl p-3 sm:p-6 shadow-lg">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2 sm:mb-4 flex items-center justify-center gap-2 sm:gap-3">
+            <Sparkles className="text-[#F28D2B]" size={32} />
             גלגל האלף-בית
-            <Sparkles className="text-[#F28D2B]" size={48} />
+            <Sparkles className="text-[#F28D2B]" size={32} />
           </h1>
-          <p className="text-xl text-[#E6F0DB]">
+          <p className="text-base sm:text-xl text-[#E6F0DB]">
             סובב את הגלגל כדי לקבל אות ולענות על השאלה!
           </p>
         </div>
